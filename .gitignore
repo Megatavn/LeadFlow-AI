@@ -8,3 +8,5 @@ android/build
 *.apk
 *.zip
 .DS_Store
+docs/demo/*.mp4
+*.mp4
