@@ -1,41 +1,52 @@
-# LeadFlow AI — Vietnamese Offline CRM Prototype
+# LeadFlow AI — Offline Sales Intelligence CRM
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.jpg" width="230" alt="LeadFlow AI Dashboard" />
-  <img src="docs/screenshots/lead-inbox.jpg" width="230" alt="LeadFlow AI Lead Inbox" />
-  <img src="docs/screenshots/lead-detail.jpg" width="230" alt="LeadFlow AI Lead Detail" />
+  <strong>Vietnamese-first mobile CRM prototype for lead management, AI-style scoring, sales pipeline tracking, and Android APK demo.</strong>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/pipeline.jpg" width="230" alt="LeadFlow AI Pipeline" />
-  <img src="docs/screenshots/message-studio.jpg" width="230" alt="LeadFlow AI Message Studio" />
+  <img alt="React" src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=black" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white" />
+  <img alt="Capacitor" src="https://img.shields.io/badge/Capacitor-Android-119EFF?logo=capacitor&logoColor=white" />
+  <img alt="LocalStorage" src="https://img.shields.io/badge/Storage-LocalStorage-0F766E" />
+  <img alt="Offline First" src="https://img.shields.io/badge/Mode-Offline--First-16A34A" />
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-F59E0B" />
 </p>
 
-**LeadFlow AI** là một prototype app CRM mini dành cho portfolio, giúp người bán hàng, môi giới bất động sản và doanh nghiệp nhỏ quản lý khách hàng tiềm năng ngay trên điện thoại.
+---
 
-Ứng dụng mô phỏng quy trình chăm sóc khách hàng bằng **AI logic offline**: lưu khách, chấm điểm mức độ quan tâm, dự đoán khả năng chốt, gợi ý việc cần làm, tạo tin nhắn chăm sóc, xử lý phản hồi/từ chối và theo dõi phễu bán hàng.
+## Ảnh demo / Preview
 
-> Đây là dự án portfolio chạy offline. App không dùng backend, không dùng đăng nhập, không dùng database cloud và không gọi API AI bên ngoài.
+<p align="center">
+  <img src="docs/screenshots/dashboard.jpg" width="180" alt="LeadFlow AI Dashboard" />
+  <img src="docs/screenshots/lead-inbox.jpg" width="180" alt="Lead Inbox" />
+  <img src="docs/screenshots/lead-detail.jpg" width="180" alt="Lead Detail" />
+  <img src="docs/screenshots/pipeline.jpg" width="180" alt="Sales Pipeline" />
+  <img src="docs/screenshots/message-studio.jpg" width="180" alt="Message Studio" />
+</p>
 
 ---
 
-## Demo
+## Giới thiệu nhanh
 
-- APK demo: xem trong mục **Releases** của repo.
-- Video demo: xem trong mục **Releases** của repo.
+**LeadFlow AI** là một prototype app CRM mini dành cho người bán hàng, môi giới bất động sản, freelancer và doanh nghiệp nhỏ tại Việt Nam.
+
+Ứng dụng giúp người dùng quản lý khách hàng tiềm năng ngay trên điện thoại, theo dõi phễu bán hàng, chấm điểm mức độ quan tâm bằng logic offline, gợi ý việc cần làm và tạo tin nhắn chăm sóc khách hàng.
+
+> Đây là dự án portfolio chạy offline. App không dùng backend, không đăng nhập, không database cloud và không gọi API AI bên ngoài.
 
 ---
 
-## Mục tiêu dự án
+## Why this project exists
 
-Dự án được xây dựng để thể hiện khả năng:
+This project was built as a **portfolio-ready AI product prototype** to demonstrate:
 
-- Thiết kế sản phẩm mobile-first cho người dùng Việt Nam.
-- Xây dựng UI/UX thuần Việt, dễ dùng, ít thao tác.
-- Mô phỏng AI automation bằng rule-based logic.
-- Quản lý dữ liệu local bằng LocalStorage.
-- Đóng gói web app thành APK Android bằng Capacitor.
-- Trình bày một sản phẩm portfolio đủ rõ ràng để đưa vào GitHub/CV.
+- Mobile-first product design for Vietnamese non-technical users.
+- Rule-based AI automation without external AI APIs.
+- Offline-first data persistence with LocalStorage.
+- Lead scoring, deal probability, follow-up planning, and message generation.
+- Android APK packaging with Capacitor.
+- A clear GitHub/CV-ready product presentation.
 
 ---
 
@@ -55,139 +66,125 @@ LeadFlow AI phù hợp với:
 
 ### 1. Quản lý khách hàng tiềm năng
 
-Người dùng có thể lưu thông tin khách hàng: tên, số điện thoại, nguồn khách, ngành/lĩnh vực, nhu cầu, ngân sách, ghi chú và trạng thái tư vấn.
+Lưu thông tin khách hàng như tên, số điện thoại, nguồn khách, ngành/lĩnh vực, nhu cầu, ngân sách, ghi chú và trạng thái tư vấn.
 
-### 2. Chấm điểm khách hàng bằng AI logic
+### 2. AI Lead Scoring offline
 
-App tự tính điểm khách hàng dựa trên các tín hiệu như: có số điện thoại, có ngân sách rõ ràng, nhu cầu cụ thể, có ý định gặp/xem trực tiếp, hỏi giá/pháp lý hoặc thông tin ra quyết định.
+App mô phỏng cơ chế chấm điểm khách hàng bằng rule-based logic, dựa trên các tín hiệu như:
+
+- Có số điện thoại.
+- Có ngân sách rõ ràng.
+- Có nhu cầu cụ thể.
+- Có ý định xem/gặp trực tiếp.
+- Hỏi giá, pháp lý hoặc thông tin ra quyết định.
 
 Kết quả được phân loại thành:
 
-- Khách nóng.
-- Khách ấm.
-- Khách lạnh.
-- Cần thêm thông tin.
+```text
+Khách nóng → Khách ấm → Khách lạnh → Cần thêm thông tin
+```
 
-### 3. Dự đoán khả năng chốt
+### 3. Deal Probability
 
-LeadFlow AI mô phỏng chỉ số **Deal Probability** để giúp người dùng biết khách nào nên được ưu tiên chăm sóc trước.
+Mô phỏng khả năng chốt khách để giúp người dùng biết khách nào nên được ưu tiên chăm sóc trước.
 
-### 4. Lead Health — sức khỏe khách hàng
+### 4. Lead Health
 
-App giúp phát hiện khách hàng có nguy cơ bị bỏ quên:
+Phát hiện khách hàng có nguy cơ bị bỏ quên:
 
 - Khách cần chăm sóc hôm nay.
-- Khách đã lâu chưa follow-up.
-- Khách nóng cần ưu tiên.
-- Khách có khả năng mất cơ hội nếu không liên hệ kịp.
+- Khách nóng cần follow-up nhanh.
+- Khách đã lâu chưa liên hệ.
+- Khách có khả năng mất cơ hội nếu không xử lý kịp.
 
-### 5. Tạo tin nhắn chăm sóc
+### 5. Message Studio
 
-Ứng dụng có thư viện tin nhắn mẫu để hỗ trợ chào khách mới, follow-up khách đang phân vân, gửi thông tin/bảng giá, chốt lịch hẹn và chăm lại khách cũ.
+Tạo tin nhắn chăm sóc khách hàng theo ngữ cảnh:
 
-### 6. Xử lý phản hồi/từ chối
+- Chào khách mới.
+- Follow-up khách đang phân vân.
+- Gửi thông tin/bảng giá.
+- Chốt lịch hẹn.
+- Chăm lại khách cũ.
 
-LeadFlow AI gợi ý cách trả lời khi khách nói “giá cao”, “để suy nghĩ thêm”, “chưa cần gấp”, “gửi xem trước” hoặc “đang tham khảo thêm”.
+### 6. Objection Handling
 
-### 7. Phễu bán hàng
+Gợi ý phản hồi khi khách nói:
 
-Ứng dụng theo dõi khách qua các giai đoạn:
+```text
+"Giá cao"
+"Để suy nghĩ thêm"
+"Chưa cần gấp"
+"Gửi xem trước"
+"Đang tham khảo thêm"
+```
+
+### 7. Sales Pipeline
+
+Theo dõi khách qua các giai đoạn:
 
 ```text
 Mới → Đang tư vấn → Quan tâm cao → Hẹn gặp → Đã chốt → Đã mất
 ```
 
-### 8. Chạy offline
+### 8. Offline-first
 
-LeadFlow AI được thiết kế theo hướng offline-first:
+LeadFlow AI được thiết kế để chạy nhẹ, không phụ thuộc server:
 
 - Không cần tài khoản.
-- Không cần server.
+- Không cần backend.
 - Không cần database online.
-- Không cần API AI.
-- Dữ liệu lưu local trên máy bằng LocalStorage.
+- Không cần API AI thật.
+- Dữ liệu lưu local bằng LocalStorage.
 
 ---
 
-## Screenshots
+## Tech Stack
 
-### Tổng quan
-
-<img src="docs/screenshots/dashboard.jpg" width="280" alt="Dashboard" />
-
-### Danh sách khách
-
-<img src="docs/screenshots/lead-inbox.jpg" width="280" alt="Lead Inbox" />
-
-### Chi tiết khách
-
-<img src="docs/screenshots/lead-detail.jpg" width="280" alt="Lead Detail" />
-
-### Phễu bán hàng
-
-<img src="docs/screenshots/pipeline.jpg" width="280" alt="Pipeline" />
-
-### Soạn tin AI
-
-<img src="docs/screenshots/message-studio.jpg" width="280" alt="Message Studio" />
-
----
-
-## Công nghệ sử dụng
-
-| Công nghệ | Vai trò |
+| Layer | Technology |
 |---|---|
-| React | Xây dựng giao diện |
-| Vite | Build tool |
-| TailwindCSS / CSS | Thiết kế UI |
-| Capacitor Android | Đóng gói APK Android |
-| LocalStorage | Lưu dữ liệu offline |
-| JavaScript | Logic xử lý dữ liệu |
-| GitHub Codespaces | Môi trường build/demo |
+| Frontend | React + Vite |
+| Mobile packaging | Capacitor Android |
+| Styling | CSS / Tailwind-style mobile UI |
+| Storage | LocalStorage |
+| Logic | JavaScript rule-based automation |
+| Build environment | GitHub Codespaces |
+| Backend | None |
+| Auth | None |
+| Online database | None |
+| AI API | None in MVP |
 
 ---
 
-## Kiến trúc thư mục
+## Project Structure
 
 ```text
 LeadFlow-AI/
 ├─ android/                 # Android project generated by Capacitor
-├─ docs/                    # Tài liệu dự án, roadmap, changelog, hướng dẫn
-│  └─ screenshots/          # Ảnh demo dùng trong README
+├─ docs/                    # Project docs and screenshots
+│  └─ screenshots/          # README screenshots
 ├─ public/                  # Static assets
-├─ scripts/                 # Script hỗ trợ setup/build
-├─ src/                     # Source code chính
-├─ BUILD_APK.md             # Hướng dẫn build APK
-├─ README.md                # Tài liệu dự án
-├─ capacitor.config.ts      # Cấu hình Capacitor
-├─ package.json             # Dependencies/scripts
-└─ vite.config.js           # Cấu hình Vite
+├─ scripts/                 # Helper scripts
+├─ src/                     # Main source code
+├─ BUILD_APK.md             # APK build guide
+├─ README.md                # Project documentation
+├─ capacitor.config.ts      # Capacitor configuration
+├─ package.json             # Dependencies and scripts
+└─ vite.config.js           # Vite configuration
 ```
 
 ---
 
-## Cài đặt và chạy thử
-
-### 1. Clone repo
+## Run Locally
 
 ```bash
 git clone https://github.com/Megatavn/LeadFlow-AI.git
 cd LeadFlow-AI
-```
-
-### 2. Cài dependencies
-
-```bash
 npm install
-```
-
-### 3. Chạy development server
-
-```bash
 npm run dev
 ```
 
-### 4. Build web app
+Build web app:
 
 ```bash
 npm run build
@@ -195,9 +192,9 @@ npm run build
 
 ---
 
-## Build APK Android
+## Build Android APK
 
-Dự án dùng Capacitor để đóng gói thành APK Android.
+This project uses Capacitor to package the web app into an Android APK.
 
 ```bash
 npm run build
@@ -206,13 +203,13 @@ cd android
 ./gradlew assembleDebug
 ```
 
-APK sau khi build nằm tại:
+APK output:
 
 ```text
 android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Nếu chưa có thư mục `android`, chạy:
+If the Android platform does not exist yet:
 
 ```bash
 npx cap add android
@@ -223,7 +220,9 @@ npx cap sync android
 
 ## APK Demo
 
-Bạn có thể tải APK demo trong mục **Releases** của repo:
+You can download the APK demo from the **Releases** section of this repository.
+
+Recommended release title:
 
 ```text
 LeadFlow AI v2.6 APK Demo
@@ -231,66 +230,105 @@ LeadFlow AI v2.6 APK Demo
 
 ---
 
-## Điểm nổi bật của dự án
+## Portfolio Highlights
 
-- Giao diện mobile-first tối ưu cho Android.
-- Ngôn ngữ chính là tiếng Việt.
-- Luồng sử dụng đơn giản, phù hợp người không rành công nghệ.
-- Có AI scoring logic nhưng không phụ thuộc API bên ngoài.
-- Có thể build thành APK để demo trực tiếp trên điện thoại.
-- Có README, docs, changelog, screenshot, video demo và release APK để phục vụ portfolio/CV.
+This project is designed to show the following capabilities:
+
+- Product thinking for a real business workflow.
+- Mobile-first UI/UX for Vietnamese users.
+- Offline-first app architecture.
+- Rule-based AI automation without paid API dependencies.
+- LocalStorage persistence.
+- Android APK packaging with Capacitor.
+- GitHub-ready documentation with screenshots, changelog and release APK.
 
 ---
 
-## Giới hạn hiện tại
+## Current Limitations
 
-Đây là prototype portfolio nên chưa bao gồm:
+This is a portfolio prototype, so it does not include:
 
-- Đăng nhập tài khoản.
-- Đồng bộ cloud.
+- User authentication.
+- Cloud sync.
 - Backend/server.
-- Database online.
-- API AI thật.
-- Tích hợp Zalo/Facebook/CRM bên ngoài.
-- Push notification thật.
+- Online database.
+- Real AI API integration.
+- Zalo/Facebook/Google Sheets integration.
+- Real push notification.
+- Multi-user team collaboration.
 
-Các tính năng AI hiện tại được mô phỏng bằng rule-based logic để giữ app nhẹ, dễ build và phù hợp mục tiêu demo CV.
-
----
-
-## Roadmap đề xuất
-
-### Phiên bản tiếp theo
-
-- Bổ sung nhiều mẫu tin nhắn theo ngành nghề.
-- Cải thiện import/export dữ liệu.
-- Tối ưu layout cho nhiều kích thước màn hình.
-- Thêm case study chi tiết hơn trong repo.
-
-### Nếu phát triển thương mại
-
-- Thêm đăng nhập.
-- Thêm cloud database.
-- Đồng bộ nhiều thiết bị.
-- Tích hợp AI API thật.
-- Tích hợp Google Sheets/Zalo/Facebook.
-- Tạo gói Free/Pro cho người dùng.
+The current AI features are simulated with rule-based logic to keep the MVP lightweight, offline and easy to demo.
 
 ---
 
-## Cách mô tả trong CV
+## Roadmap
+
+### Next portfolio improvements
+
+- Add more industry-specific message templates.
+- Add import/export JSON or CSV.
+- Improve mobile layout consistency across screen sizes.
+- Add a short demo video/GIF to the README.
+- Add a case-study section explaining product decisions.
+
+### Commercial upgrade ideas
+
+- User accounts.
+- Cloud database.
+- Multi-device sync.
+- Real AI API integration.
+- Zalo/Facebook/Google Sheets integration.
+- Free/Pro subscription model.
+- Team workspace and shared pipeline.
+
+---
+
+## CV Description
 
 ```text
 LeadFlow AI — Offline Sales Intelligence CRM Prototype
 
-Built a Vietnamese mobile-first CRM prototype with rule-based AI lead scoring, deal probability, lead health, follow-up timeline, objection handling, message generator, sales pipeline, LocalStorage persistence, and Android APK packaging.
+Built a Vietnamese mobile-first CRM prototype with rule-based AI lead scoring, deal probability, lead health tracking, follow-up timeline, objection handling, message generation, sales pipeline management, LocalStorage persistence, and Android APK packaging with Capacitor.
 
-Tech stack: React, Vite, Capacitor Android, LocalStorage.
+Tech stack: React, Vite, Capacitor Android, JavaScript, LocalStorage.
+```
+
+Short CV bullet:
+
+```text
+Built LeadFlow AI, an offline-first Vietnamese CRM prototype that helps small businesses manage leads, score customer intent, generate follow-up messages, track pipeline stages, and package the app as an Android APK with Capacitor.
 ```
 
 ---
 
-## Tác giả
+## Suggested GitHub About
+
+**Description**
+
+```text
+Vietnamese offline CRM prototype with AI-style lead scoring, sales pipeline, message generator, LocalStorage persistence, and Android APK demo.
+```
+
+**Topics**
+
+```text
+react
+vite
+capacitor
+android
+crm
+lead-management
+ai-automation
+sales-automation
+offline-first
+localstorage
+portfolio
+vietnamese-app
+```
+
+---
+
+## Author
 
 **Vũ Hoàng**  
 AI Product Builder / AI Automation Portfolio
