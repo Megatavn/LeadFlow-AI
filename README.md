@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Capacitor-Android-119EFF?logo=capacitor&logoColor=white" alt="Capacitor" />
+  <img src="https://img.shields.io/badge/Capacitor-Android-119EFF?logo=capacitor&logoColor=white" alt="Capacitor Android" />
   <img src="https://img.shields.io/badge/Storage-LocalStorage-16A34A" alt="LocalStorage" />
   <img src="https://img.shields.io/badge/Mode-Offline--First-22C55E" alt="Offline First" />
   <img src="https://img.shields.io/badge/Language-Vietnamese--First-F59E0B" alt="Vietnamese First" />
@@ -21,6 +21,16 @@
 **LeadFlow AI** là một prototype app **CRM mini offline** dành cho người bán hàng, môi giới bất động sản, freelancer và doanh nghiệp nhỏ tại Việt Nam. App giúp quản lý khách hàng tiềm năng, chấm điểm mức độ quan tâm, dự đoán khả năng chốt, theo dõi phễu bán hàng và tạo tin nhắn chăm sóc khách bằng **AI logic mô phỏng offline**.
 
 > Đây là dự án portfolio. App không dùng backend, không dùng đăng nhập, không dùng database cloud và không gọi API AI bên ngoài trong MVP.
+
+---
+
+## Demo
+
+- **Android APK:** tải tại mục **Releases** của repo.
+- **Source code:** React + Vite + Capacitor Android.
+- **Mode:** offline-first, không backend, không login, không real AI API trong MVP.
+
+> Bản APK hiện tại là bản demo phục vụ portfolio, chưa phải bản production trên Play Store.
 
 ---
 
@@ -47,18 +57,9 @@ App tập trung vào trải nghiệm **mobile-first**, tiếng Việt dễ hiể
 
 ---
 
-## 3. Demo
+## 3. Tính năng chính
 
-- **APK demo:** xem trong mục **Releases** của repo.
-- **Video demo:** xem trong mục **Releases** hoặc phần mô tả dự án nếu có.
-
-> Bản APK hiện tại là bản demo phục vụ portfolio, chưa phải bản production trên Play Store.
-
----
-
-## 4. Tính năng chính
-
-### 4.1. Quản lý khách hàng tiềm năng
+### 3.1. Quản lý khách hàng tiềm năng
 
 Người dùng có thể lưu thông tin khách hàng:
 
@@ -71,7 +72,7 @@ Người dùng có thể lưu thông tin khách hàng:
 - Ghi chú tư vấn
 - Trạng thái chăm sóc
 
-### 4.2. AI Lead Scoring — chấm điểm khách bằng logic offline
+### 3.2. AI Lead Scoring — chấm điểm khách bằng logic offline
 
 App tự chấm điểm lead dựa trên các tín hiệu như:
 
@@ -88,11 +89,11 @@ Kết quả phân loại:
 - **Khách lạnh** — chưa đủ tín hiệu mua hàng
 - **Cần thêm thông tin** — thiếu dữ liệu để đánh giá
 
-### 4.3. Deal Probability — dự đoán khả năng chốt
+### 3.3. Deal Probability — dự đoán khả năng chốt
 
 LeadFlow AI mô phỏng chỉ số khả năng chốt để giúp người dùng biết khách nào nên được ưu tiên chăm sóc trước.
 
-### 4.4. Lead Health — sức khỏe khách hàng
+### 3.4. Lead Health — sức khỏe khách hàng
 
 App giúp phát hiện các lead có nguy cơ bị bỏ quên:
 
@@ -101,7 +102,7 @@ App giúp phát hiện các lead có nguy cơ bị bỏ quên:
 - Khách cần chăm sóc hôm nay
 - Khách có nguy cơ mất cơ hội nếu xử lý chậm
 
-### 4.5. Message Studio — tạo tin nhắn chăm sóc
+### 3.5. Message Studio — tạo tin nhắn chăm sóc
 
 App có thư viện tin nhắn mẫu để hỗ trợ:
 
@@ -112,7 +113,7 @@ App có thư viện tin nhắn mẫu để hỗ trợ:
 - Chăm lại khách cũ
 - Xử lý phản hồi/từ chối
 
-### 4.6. Objection Handling — xử lý từ chối
+### 3.6. Objection Handling — xử lý từ chối
 
 LeadFlow AI gợi ý cách phản hồi khi khách nói:
 
@@ -122,7 +123,7 @@ LeadFlow AI gợi ý cách phản hồi khi khách nói:
 - “Gửi xem trước”
 - “Đang tham khảo thêm”
 
-### 4.7. Sales Pipeline — phễu bán hàng
+### 3.7. Sales Pipeline — phễu bán hàng
 
 Ứng dụng theo dõi khách qua các giai đoạn:
 
@@ -130,7 +131,7 @@ LeadFlow AI gợi ý cách phản hồi khi khách nói:
 Mới → Đang tư vấn → Quan tâm cao → Hẹn gặp → Đã chốt → Đã mất
 ```
 
-### 4.8. Offline-first
+### 3.8. Offline-first
 
 LeadFlow AI được thiết kế để chạy offline:
 
@@ -142,7 +143,7 @@ LeadFlow AI được thiết kế để chạy offline:
 
 ---
 
-## 5. Screenshots
+## 4. Screenshots
 
 ### Dashboard / Tổng quan
 
@@ -166,24 +167,25 @@ LeadFlow AI được thiết kế để chạy offline:
 
 ---
 
-## 6. Tech Stack
+## 5. Công nghệ sử dụng / Tech Stack
 
-| Layer | Technology |
+| Công nghệ | Vai trò |
 |---|---|
-| Frontend | React + Vite |
-| Styling | CSS / Tailwind-style utility approach |
-| Mobile wrapper | Capacitor Android |
-| Storage | LocalStorage |
-| AI logic | Rule-based scoring and message templates |
-| Build environment | GitHub Codespaces |
-| Backend | None in MVP |
-| Auth | None in MVP |
-| Online database | None in MVP |
-| External AI API | None in MVP |
+| React | Xây dựng giao diện app |
+| Vite | Build tool và dev server |
+| CSS / Tailwind-style utility approach | Thiết kế giao diện mobile-first |
+| Capacitor Android | Đóng gói web app thành APK Android |
+| LocalStorage | Lưu dữ liệu offline trên thiết bị |
+| JavaScript | Xử lý logic lead scoring, pipeline và message templates |
+| GitHub Codespaces | Môi trường phát triển/build/demo |
+| Backend | Không dùng trong MVP |
+| Auth/Login | Không dùng trong MVP |
+| Online database | Không dùng trong MVP |
+| External AI API | Không dùng trong MVP |
 
 ---
 
-## 7. Architecture
+## 6. Architecture
 
 ```text
 LeadFlow-AI/
@@ -202,7 +204,7 @@ LeadFlow-AI/
 
 ---
 
-## 8. Run Locally
+## 7. Run Locally
 
 ```bash
 git clone https://github.com/Megatavn/LeadFlow-AI.git
@@ -219,7 +221,7 @@ npm run build
 
 ---
 
-## 9. Build Android APK
+## 8. Build Android APK
 
 LeadFlow AI dùng Capacitor để đóng gói web app thành Android APK.
 
@@ -245,7 +247,7 @@ npx cap sync android
 
 ---
 
-## 10. Portfolio Value
+## 9. Portfolio Value
 
 Dự án này được xây dựng để thể hiện các năng lực sau:
 
@@ -259,7 +261,7 @@ Dự án này được xây dựng để thể hiện các năng lực sau:
 
 ---
 
-## 11. Current Limitations
+## 10. Current Limitations
 
 Đây là prototype portfolio, nên chưa bao gồm:
 
@@ -276,7 +278,7 @@ Các tính năng AI trong MVP được mô phỏng bằng rule-based logic để
 
 ---
 
-## 12. Roadmap
+## 11. Roadmap
 
 ### Next version
 
@@ -298,7 +300,7 @@ Các tính năng AI trong MVP được mô phỏng bằng rule-based logic để
 
 ---
 
-## 13. CV Description
+## 12. CV Description
 
 ```text
 LeadFlow AI — Offline Sales Intelligence CRM Prototype
@@ -319,7 +321,7 @@ Built LeadFlow AI, an offline-first Vietnamese CRM prototype with rule-based AI 
 
 ---
 
-## 14. GitHub About
+## 13. GitHub About
 
 Suggested repository description:
 
@@ -333,6 +335,22 @@ Suggested topics:
 react, vite, android, capacitor, crm, lead-management, sales-automation,
 ai-automation, localstorage, offline-app, vietnamese-app, portfolio,
 product-builder
+```
+
+---
+
+## 14. Release Title Suggestion
+
+Nếu tạo release APK mới, nên đặt title:
+
+```text
+LeadFlow AI v2.6.0 — Android APK Portfolio Demo
+```
+
+Release note ngắn:
+
+```text
+Portfolio APK demo for LeadFlow AI, a Vietnamese offline CRM prototype with rule-based AI lead scoring, sales pipeline management, follow-up message generation, LocalStorage persistence and Android APK packaging with Capacitor.
 ```
 
 ---
